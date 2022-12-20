@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import './style.css';
+import './css/style.css';
 
-export default function App() {
+export const ApiDivisas=() =>{
   let myHeaders = new Headers();
   const [resultado,setResultado]= useState(0);
   const handleSubmit=(e)=>{
@@ -30,7 +30,7 @@ export default function App() {
     return (
       <div className="background">
     
-      <form className="container" onSubmit={handleSubmit}>
+      <form className="conta" onSubmit={handleSubmit}>
         <div className="selects-container">
           <select className='moneda1'
             name="monedaUno"

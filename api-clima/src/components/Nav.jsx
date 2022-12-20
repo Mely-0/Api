@@ -10,7 +10,7 @@ export const Nav = () => {
 
         <Link to="/Home"> Home</Link>
         <Link to="/Weather"> Weather</Link>
-        <a href="#link">Links</a>
+        <Link to="/apiDivisas"> Api Divisas</Link>
         <a href="#link">Contact</a>
     </nav>
     </details>
