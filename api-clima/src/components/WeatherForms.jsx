@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import './css/weather.css'
+import {MdSearch } from "react-icons/md";
 export const WeatherForms = ({newLocation}) => {
     const [city , setCity]=useState("");
 
@@ -24,7 +25,7 @@ export const WeatherForms = ({newLocation}) => {
 
                     />
             <button className="btn-block" type='submit' >
-                Get Weather
+            <MdSearch className='icono'/>
             </button>
             </div>
         </form>

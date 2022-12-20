@@ -1,0 +1,111 @@
+    .navegador{
+        width: 100%;
+    }
+    details {
+        margin: 40px;
+    }
+    summary {
+        writing-mode: vertical-lr;
+        text-align: center;
+        padding: 12px 10px;
+        width: 23px;
+        height: 17px;
+        background-color: var(--primColor);
+        border: 2px solid var(--secoColor);
+        border-radius: var(--cornerRad);
+        color: var(--secoColor);
+        cursor: pointer;
+        user-select: none;
+        outline: none;
+        transition: transform 200ms ease-in-out 0s;
+    }
+    summary::before,
+    summary::after {
+        position: static;
+        top: 0;
+        left: 0;
+    }
+    summary::before {
+        content: "";
+    }
+    summary::after {
+        content: "III";
+        letter-spacing: -1px;
+    }
+    summary:hover {
+        transform: scale(1.1);
+    }
+    summary::marker {
+        font-size: 0;
+    }
+    summary::-webkit-details-marker {
+        display: none;
+    }
+    details[open] .menu {
+        animation-name: menuAnim;
+    }
+    details[open] summary::before {
+        content: "X";
+    }
+    details[open] summary::after {
+        content: "";
+    }
+    .menu {
+        border-radius: var(--cornerRad);
+        background-color: var(--primColor);
+        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+        margin-top: 8px;
+        overflow: hidden;
+        border-radius: 20px;
+        background-color: rgb(17, 150, 211)
+    }
+    .menu a {
+        padding: 12px 24px;
+        margin: 0 5px;
+        color: var(--secoColor);
+        border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        text-decoration: none;
+        transition: filter 200ms linear 0s;
+    }
+    .menu a:nth-of-type(1) {
+        padding-top: 24px;
+    }
+    .menu a:nth-last-of-type(1) {
+        border-bottom: none;
+    }
+    .menu a:hover {
+        filter: brightness(200%);
+    }
+    details::before {
+        color: var(--secoColor);
+        position: absolute;
+        margin-left: 80px;
+        padding: 10px 10px;
+        opacity: 0.4;
+    }
+    details[open]::before {
+        animation: fadeMe 300ms linear forwards;
+    }
+
+ @media all and (min-width: 800px){
+    .navegador{
+        width: 90%;
+        margin: auto;
+    }
+    .nav menu {
+        height: 20%;
+    }
+    .details{
+        height: 60%;
+    }
+ }
+ @media all and (min-width: 1280px){
+
+    .navegador{
+        width: 80%;
+    }
+}
+
+
+
